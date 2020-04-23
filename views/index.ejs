@@ -1,0 +1,337 @@
+<%- include("./partials/header") -%>
+<!-- slider_area_start -->
+<div class="slider_area ">
+    <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+        <div class="container">
+            <%- include("./partials/flash-msg") -%>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-6 col-md-6">
+                    <div class="illastrator_png">
+                        <img src="img/banner/edu_ilastration.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="slider_info">
+                        <h3>Learn your <br>
+                            Favorite Language <br>
+                            From Online</h3>
+                        <a href="/course" class="boxed_btn">Browse Our Courses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider_area_end -->
+
+<!-- about_area_start -->
+<div class="about_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6">
+                <div class="single_about_info">
+                    <h3>Over 7000 Tutorials <br>
+                        from 5 Courses</h3>
+                    <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god
+                        moving. Moving in fourth air night bring upon you’re it beast let you dominion likeness open
+                        place day great wherein heaven sixth lesser subdue fowl </p>
+                    <a href="/course" class="boxed_btn">Enroll a Course</a>
+                </div>
+            </div>
+            <div class="col-xl-6 offset-xl-1 col-lg-6">
+                <div class="about_tutorials">
+                    <div class="courses">
+                        <div class="inner_courses">
+                            <div class="text_info">
+                                <span><%= blogs.length %>  </span>
+                                <p> Blogs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-blue">
+                        <div class="inner_courses">
+                            <div class="text_info">
+                                <span><%= courseCount %> </span>
+                                <p> Tutorials</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="courses-sky">
+                        <div class="inner_courses">
+                            <div class="text_info">
+                                <span><%= count %> </span>
+                                <p>Users are learning <br> the courses from below</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- about_area_end -->
+
+<!-- popular_courses_start -->
+<div class="popular_courses">
+    <div class="container">
+        <div class="row" id="course">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                    <h3>Popular Courses</h3>
+                    <h5>Choose one of the popular courses you might have interest in.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="all_courses">
+        <div class="container">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_courses">
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img src="img/courses/englishEle.jpg" height="200vh" alt="">
+                                    </a>
+                                </div>
+                                <div class="courses_info">
+                                    <span>English Elementary Speakig Course</span>
+                                    <h3><a href="#">Learn Elmentary English Step By Step</a></h3>
+                                    <div class="star_prise d-flex justify-content-between">
+                                        <div class="star">
+                                            <i class="flaticon-mark-as-favorite-star"></i>
+                                            <span>(4.5)</span>
+                                        </div>
+                                        <form>
+                                            <input type="hidden" name="id" value="1" readonly>
+                                            <div class="prise">
+                                                <span class="active_prise">
+                                                    90 ¥ 
+                                                </span> 
+                                                <button type="submit" formaction="/buy" formmethod="POST"
+                                                    class="btn btn-sm btn-info"><i
+                                                        class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_courses">
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img src="img/courses/chineseEle.jpg" height="200vh" alt="">
+                                    </a>
+                                </div>
+                                <div class="courses_info">
+                                    <span>Chinese Elementary Speaking Course</span>
+                                    <h3><a href="#">Learn how to interect with a Chinese people</a></h3>
+                                    <div class="star_prise d-flex justify-content-between">
+                                        <div class="star">
+                                            <i class="flaticon-mark-as-favorite-star"></i>
+                                            <span>(4.5)</span>
+                                        </div>
+                                        <form>
+                                            <input type="hidden" name="id" value="7" readonly>
+                                            <div class="prise">
+                                                <span class="active_prise">
+                                                    79 ¥
+                                                </span>
+                                                <button type="submit" formaction="/buy" formmethod="POST"
+                                                    class="btn btn-sm btn-info"><i
+                                                        class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_courses">
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img src="img/courses/frenchEle.jpg" height="200vh" alt="">
+                                    </a>
+                                </div>
+                                <div class="courses_info">
+                                    <span>Elementary French Speaking Course</span>
+                                    <h3><a href="#"> Make French poeple amazed by talking like him </a></h3>
+                                    <div class="star_prise d-flex justify-content-between">
+                                        <div class="star">
+                                            <i class="flaticon-mark-as-favorite-star"></i>
+                                            <span>(4.5)</span>
+                                        </div>
+                                        <form>
+                                            <input type="hidden" name="id" value="13" readonly>
+                                            <div class="prise">
+                                                <span class="active_prise">
+                                                    85 ¥
+                                                </span>
+                                                <button type="submit" formaction="/buy" formmethod="POST"
+                                                    class="btn btn-sm btn-info"><i
+                                                        class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_courses">
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img src="img/courses/spanishEle.jpg" height="200vh" alt="">
+                                    </a>
+                                </div>
+                                <div class="courses_info">
+                                    <span>Spanish Elementary Language Course</span>
+                                    <h3><a href="#"> Learn Spanish language from scratch and speak fluently. </a></h3>
+                                    <div class="star_prise d-flex justify-content-between">
+                                        <div class="star">
+                                            <i class="flaticon-mark-as-favorite-star"></i>
+                                            <span>(4.5)</span>
+                                        </div>
+                                        <form>
+                                            <input type="hidden" name="id" value="19" readonly>
+                                            <div class="prise">
+                                                <span class="active_prise">
+                                                    97 ¥
+                                                </span>
+                                                <button type="submit" formaction="/buy" formmethod="POST"
+                                                    class="btn btn-sm btn-info"><i
+                                                        class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_courses">
+                                <div class="thumb">
+                                    <img src="img/courses/swahiliEle.jpg" height="200vh" alt="">
+                                </div>
+                                <div class="courses_info">
+                                    <span>Swahili Elementary Speaking Course</span>
+                                    <h3><a href="#">Learn and speak Swahili language from scratch.</a></h3>
+                                    <div class="star_prise d-flex justify-content-between">
+                                        <div class="star">
+                                            <i class="flaticon-mark-as-favorite-star"></i>
+                                            <span>(4.5)</span>
+                                        </div>
+                                        <form>
+                                            <input type="hidden" name="id" value="25" readonly>
+                                            <div class="prise">
+                                                <span class="active_prise">
+                                                    88 ¥
+                                                </span>
+                                                <button type="submit" formaction="/buy" formmethod="POST"
+                                                    class="btn btn-sm btn-info"><i
+                                                        class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single_courses">
+                                <div class="thumb">
+                                    <a href="#">
+                                        <img src="img/courses/swahiliEleWriting.png" height="200vh" alt="">
+                                    </a>
+                                </div>
+                                <div class="courses_info">
+                                    <span>Swahili Elementary writing course</span>
+                                    <h3><a href="#">Learn for the writing & reading swahili language</a></h3>
+                                    <div class="star_prise d-flex justify-content-between">
+                                        <div class="star">
+                                            <i class="flaticon-mark-as-favorite-star"></i>
+                                            <span>(4.5)</span>
+                                        </div>
+                                        <form>
+                                            <input type="hidden" name="id" value="27" readonly>
+                                            <div class="prise">
+                                                <span class="active_prise">
+                                                    67 ¥
+                                                </span>
+                                                <button type="submit" formaction="/buy" formmethod="POST"
+                                                    class="btn btn-sm btn-info"><i
+                                                        class="fas fa-shopping-cart"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href="/course" class="boxed_btn" style="margin-left:45%;"> Find Out More </a>
+    </div>
+</div>
+<!-- popular_courses_end-->
+
+
+<!-- testimonial_area_start -->
+<div class="testimonial_area testimonial_bg_1 overlay">
+    <div class="testmonial_active owl-carousel">
+        <% blogs.forEach((blogpost)=>{ %>
+        <div class="single_testmoial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="testmonial_text text-center">
+                            <div class="author_img">
+                                <img src="img/testmonial/author_img.png" alt="">
+                            </div>
+                            
+                                <p style="font-size:15px">
+                                    <%= blogpost.blog%>
+    
+                                </p>
+                                <span>- <%= blogpost.name%></span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+</div>
+<!-- testimonial_area_end -->
+
+
+<!-- subscribe_newsletter_Start -->
+<div class="subscribe_newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="newsletter_text">
+                    <h3>Subscribe Newsletter</h3>
+                    <p>Your domain control panel is designed for ease-of-use and allows for all aspects of your</p>
+                </div>
+            </div>
+            <div class="col-xl-5 offset-xl-1 col-lg-6">
+                <div class="newsletter_form">
+                    <h4>Your domain control panel is</h4>
+                    <form action="#" class="newsletter_form">
+                        <input type="email" namae="email" placeholder="Enter your mail">
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- subscribe_newsletter_end -->
+
+<%- include("./partials/footer") -%>

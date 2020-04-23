@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>POLYGLOTIANS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/magnific-popup.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/themify-icons.css">
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="./css/flaticon.css">
+    <link rel="stylesheet" href="./css/gijgo.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/slicknav.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="/">
+                                    <i class="fas fa-language icon" style="margin-left: 160px;"></i>
+                                    <div class="navbar-brand"
+                                        style="font-family: 'Bree Serif', serif;margin-left: 105px;">POLYGLOTIANS</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/">home</a></li>
+                                        <li><a href="/course">Courses</a></li>
+                                        <li><a href="/blog"> blog </li>
+                                        <li><a href="/contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-center">
+                                <a href="/dashboard" id="navigation" class="btn btn-outline-info" style="color:white">
+                                    Dashboard </a>
+                                <a href="/users/logout" id="navigation" class="btn btn-outline-info"
+                                    style="color:white"><i class="fas fa-sign-out-alt "></i> Logout</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg">
+        <%- include("./partials/flash-msg") -%>
+        <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+
+        </div>
+        <div class="col-xl-6 col-lg-4 col-md-4 col-sm-4">
+            <h2 class="p-3" style="border: 1px solid black;">YOUR BLOG UPDATES (<%= count %>) </h2>
+            <div class="text-center" >
+                <!-- <article class="blog_item"> -->
+                <% blog.forEach((blogs)=>{ %>
+                <div class="blog_details" style="min-height: 100px;min-width: 700px;">
+                    <h2><%= blogs.title %></h2>
+                    <blockquote class="blockquote">
+                        <p class="mb-0" style="color:black !important"><%= blogs.blog%></p>
+                        <footer class="blockquote-footer"><cite title="Source Title" style="color:black !important" class="font-weight-bolder"><%= blogs.name%></cite><BR></BR>
+                        <span style="color:black"> <strong>Posted On:</strong>  <%= blogs.date %></span>
+                        </footer>
+                    </blockquote>
+                    <form action="/blogDelete" method="POST">
+                        <input type="hidden" name="id" value="<%= blogs._id %>">
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete </button>
+                    </form>
+                </div>
+               <% }) %>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+            
+        </div>
+    </div>
+    </div>  
+<%- include("./partials/footer") %> 

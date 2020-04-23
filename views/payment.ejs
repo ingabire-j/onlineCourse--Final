@@ -1,0 +1,65 @@
+<%- include("./partials/header") -%>
+
+<div class="bradcam_area breadcam_bg overlay2">
+    <!-- form login ---->
+    <div class="card" style="margin: 0vh 35vw;">
+        <div class="card-header" style="background-color:grey">
+            <h4>Pay Invoice</h4>
+        </div>
+        <div class="card-body text-left mx-5">
+            <div class="form-row">
+                <h4>Course Name</h4>
+            </div>
+            <div class="form-row">
+                <p style="font-size:20px;"><%= course.name %></p>
+            </div>
+            <div class="form-row">
+                <h4>Pyment Amount</h4>
+            </div>
+            <div class="form-row">
+                <P style="font-size:30px;"> ¥ <%= course.price%></P>
+            </div>
+            <form action="/payment" method="post">
+                <div class="form-row">
+                    <h4>Name on card</h4>
+                    <input type="text" name="name" class="form-control" required>
+                    <input type="text" name="cname" value="<%= course.name%>" hidden>
+                    <input type="number" name="ccode" value="<%= course.code%>" hidden>
+                    <input type="number" name="cprice" value="<%= course.price%>" hidden>
+                </div>
+                <br>
+                <div class="form-row">
+                    <h4>Card Number</h4>
+                    <input type="number" name="cNumber" class="form-control" required>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <h4>Expiry Date</h4>
+                        <input type="date" name="date" class="form-control" required>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <h4>Code</h4>
+                        <input type="number" name="Bcode" class="form-control" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <h4>Zip/Postal Code</h4>
+                    <input type="number" name="zip" class="form-control" required>
+                </div>
+                <br>
+                <div class="form-row">
+                    <h4>Current User Email</h4>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+                <br>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-info btn-block"><i class="fas fa-lock"></i> Pay <%= course.price%> RMB</button>
+                </div>
+            </form>
+        </div>
+      </div>
+</div>
+
+<%- include("./partials/footer") -%>
